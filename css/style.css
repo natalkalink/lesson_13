@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+body{
+   font-family:"Comfortaa" ;
+   background-color: #23a6d5;
+}
+.wrapper{
+	overflow: hidden;
+	min-height: 100%;
+	position: relative;
+}
+.page__container{
+   padding: 50px;
+}
+.title{
+   position:absolute ;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+span{
+   display: inline-block;
+   font-size: 80px;
+   letter-spacing: 50px;
+   animation: flip 2.6s infinite linear;
+   transform-origin: 0 70%;
+   transform-style: preserve-3d;
+}
+@keyframes flip{
+   35%{
+      transform: rotateX(360deg);
+   }
+   100%{
+      transform: rotateX(360deg);
+   }
+}
+.title>span:nth-child(odd){
+   color:aqua;
+}
+.title>span:nth-child(2){
+   animation-delay: 0.3s;
+}
+.title>span:nth-child(3){
+   animation-delay: 0.6s;
+}
+.title>span:nth-child(4){
+   animation-delay: 0.9s;
+}
+.title>span:nth-child(5){
+   animation-delay: 1.2s;
+}
+.sprite-image{
+   height: 123px;
+   width: 70px;
+   background: url(../img/smur-sprite.png) 0px 0px;
+   animation: go 0.8s steps(16) infinite, step 10s linear infinite;
+   position: absolute;
+   left: 0;
+   top: 70%;
+}
+@keyframes go{
+   100%{
+      background-position: -1135px;
+   }
+}
+@keyframes step{
+   100%{
+      left: 100%;
+   }
+}
+.bol-container{
+   width: 200px;
+   height: 60px;
+   position: relative;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+}
+.circle{
+   width: 20px;
+   height: 20px;
+   position: absolute;
+   border-radius: 50%;
+   background-color:aqua;
+   left:15%;
+   transform-origin: 50% ;
+   animation: 0.5s circle alternate infinite ease;
+}
+@keyframes circle{
+   0%{
+   top:60px; 
+   height: 5px;  
+   border-radius: 50px 50px 25px 25px;
+   transform: scaleX(1);
+   }
+   40%{
+      height: 20px;
+      border-radius: 50%;
+   }
+   100%{
+      top:0%;
+   }
+}
+.circle:nth-child(2){
+   left:45%;
+   animation-delay: 0.2s;
+}
+.circle:nth-child(3){
+   left:auto;
+   right: 15%;
+   animation-delay: 0.3s;
+}
